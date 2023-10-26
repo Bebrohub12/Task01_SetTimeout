@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="range" min="1" max="10">
+    <input type="text" id="text">
+    <button id="btn">submit</button>
+
+    <p id="pera"></p>
+
+
+    <script>
+        let range = document.querySelector("input")
+        let inp2 = document.querySelector("#text")
+        let btn = document.querySelector("#btn")
+        let pera = document.querySelector("#pera")
+
+        btn.onclick = () => {
+
+            // console.log(range.value);
+            setInterval(display, (range.value)*1000);
+
+        }
+
+        function display(){
+            pera.innerHTML=inp2.value
+            inp2.value=""
+        }
+
+    </script>
+
+</body>
+
+</html>
